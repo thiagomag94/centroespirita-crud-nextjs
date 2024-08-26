@@ -22,8 +22,10 @@ export const AcervoContainer = ()=>{
     }
 
     return(
-        <div className="w-full grid grid-cols-4 px-32 gap-16">
-            {booksArray.map((item) => (
+        <div className="w-full flex flex-col justify-center items-center  gap-16">
+             <h2 className="text-4xl text-cyan-900 font-semibold drop-shadow-2xl">Nosso Acervo</h2>
+             <div className="w-full grid grid-cols-4 px-32 gap-16">
+             {booksArray.map((item) => (
                         <BookContainer
                             key={item.titulo}
                             id = {item.id}
@@ -33,6 +35,7 @@ export const AcervoContainer = ()=>{
                             foialugado={item.wasBorrowed}
                         />
                     ))}
+             </div>
         </div>
     )
 }
